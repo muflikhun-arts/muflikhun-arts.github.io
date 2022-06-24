@@ -13,6 +13,18 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: ({ colors }) => ({
+      profile: {
+        DEFAULT: "#1A73E8",
+        100: "#E8F1FD",
+        200: "#C6DCF9",
+        300: "#A3C7F6",
+        400: "#5F9DEF",
+        500: "#1A73E8",
+        600: "#1768D1",
+        700: "#10458B",
+        800: "#0C3468",
+        900: "#082346",
+      },
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
