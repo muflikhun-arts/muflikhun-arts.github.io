@@ -48,6 +48,7 @@ const Storyboard = () => {
 
 						<div className="relative">
 							<Swiper
+								lazy={true}
 								style={{
 									'--swiper-navigation-color': '#84cc16',
 									width: widthImage || 'auto',
