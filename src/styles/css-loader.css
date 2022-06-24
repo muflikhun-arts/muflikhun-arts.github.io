@@ -1,0 +1,262 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://rsms.me/inter/inter.css');
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+	outline: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+	* {
+		font-size: 0.875rem;
+	}
+	.height-dinamicly {
+		height: calc(100vh - 90px);
+	}
+	.zaplin-select + label,
+	.control > input:placeholder-shown + label,
+	.control > textarea:placeholder-shown + label {
+		@apply text-gray-500 cursor-text bg-white;
+		width: max-content;
+		transform: translate(10px, 26px);
+		transition: all 0.15s ease-out;
+	}
+
+	.swiper-button-prev, .swiper-button-next {
+		@apply hidden;
+	}
+	
+	.swiper-button-prev::after, .swiper-button-next::after {
+		@apply text-2xl font-bold;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	* {
+		font-size: 0.9375rem;
+	}
+	.height-dinamicly {
+		height: calc(100vh - 190px);
+	}
+	.zaplin-select + label,
+	.control > input:placeholder-shown + label,
+	.control > textarea:placeholder-shown + label {
+		@apply text-gray-500 cursor-text bg-white;
+		width: max-content;
+		transform: translate(10px, 29px);
+		transition: all 0.15s ease-out;
+	}
+
+	.swiper-button-prev, .swiper-button-next {
+		@apply h-16 w-16 flex justify-center items-center bg-white rounded-full shadow-lg;
+	}
+	
+	.swiper-button-prev::after, .swiper-button-next::after {
+		@apply text-2xl font-bold;
+	}
+}
+
+.screen {
+	overflow-y: auto;
+	width: 100%;
+}
+
+.shadow-topbar {
+	box-shadow: 0 4px 6px -1px rgba(202, 202, 202, 0.1),
+		0 2px 4px -1px rgba(33, 33, 33, 0.06);
+}
+
+button:focus {
+	outline: none !important;
+}
+
+*::-moz-selection,
+*::-webkit-selection,
+*::-o-selection {
+	@apply bg-blue-400;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	-webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+	width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+	height: 4px;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-transparent rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-blue-600 rounded-full;
+}
+
+.ReactVirtualized__Table {
+	height: calc(100vh - 230px);
+}
+
+.ReactVirtualized__Table__headerRow {
+	text-transform: none !important;
+}
+
+#toast-container {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+}
+
+.toast-content {
+	@apply fixed z-50;
+}
+
+.toast-content.top-center {
+	top: 1vh;
+	align-self: center;
+}
+
+/* css toast */
+.toast {
+	@apply mt-2;
+}
+
+.bg-multicolor {
+	background: linear-gradient(92deg, #60f326 0%, #3afed3 100%);
+	animation: hue 10s infinite linear;
+}
+
+.text-multicolor {
+	color: #60f326;
+	background-image: linear-gradient(92deg, #60f326 0%, #3afed3 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: hue 10s infinite linear;
+}
+
+.animation {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+	animation-duration: 0.4s;
+}
+
+.animation-to-right {
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+	animation-duration: 0.4s;
+}
+
+@-webkit-keyframes hue {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(-360deg);
+	}
+}
+
+@keyframes hue {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes fadeInRight {
+	from {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+} */
+
+/* .swiper {
+	width: 100%;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.swiper-slide {
+	background-size: cover;
+	background-position: center;
+} */
+
+/* .myThumbnail {
+	height: 200px;
+  max-width: calc(100vw - 800px);
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+
+.myThumbnail .swiper-slide {
+	width: 25%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.myThumbnail .swiper-slide-thumb-active {
+	opacity: 1;
+} */
